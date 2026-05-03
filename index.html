@@ -1,0 +1,1203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Horizon | Modern News & Magazine</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./news.css" />
+  </head>
+  <body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar-date">
+          <i class="far fa-calendar-alt"></i> Tuesday, March 10, 2026
+        </div>
+
+        <div class="top-bar-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER MAIN -->
+    <header class="header-main">
+      <div class="container">
+        <div class="logo-area">
+          <a href="./index.html" class="logo">The<span>Horizon</span></a>
+          <div class="logo-tagline">Today's News, Tomorrow's History</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="main-nav">
+      <div class="container">
+        <button class="menu-toggle"><i class="fas fa-bars"></i> Menu</button>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              >Politics <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-menu">
+              <a href="./assets/pages/National.html" class="dropdown-item"
+                >National</a
+              >
+              <a href="#" class="dropdown-item">International</a>
+              <a href="#" class="dropdown-item">Elections 2026</a>
+              <a href="#" class="dropdown-item">Policy</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="./assets/pages/Business.html" class="nav-link">Business</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              >Technology <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">AI & Robotics</a>
+              <a href="#" class="dropdown-item">Gadgets</a>
+              <a href="#" class="dropdown-item">Startups</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Sports</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Entertainment</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Health</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Travel</a>
+          </li>
+          <div class="nav-indicator"></div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- BREAKING NEWS TICKER -->
+    <div class="breaking-news">
+      <div class="container">
+        <span class="breaking-label">BREAKING</span>
+        <div class="breaking-ticker" id="liveTicker">
+          <div class="ticker-track" id="tickerTrack">
+            <!-- Items will be added by JavaScript -->
+          </div>
+        </div>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <main>
+      <div class="container">
+        <!-- FEATURED GRID -->
+        <div class="featured-grid stagger-1">
+          <!-- Main Featured Article -->
+          <div class="featured-main reveal">
+            <img
+              src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200"
+              alt="Featured News"
+            />
+            <div class="featured-content">
+              <span class="featured-category">Breaking News</span>
+              <h2 class="featured-title">
+                <a href="#">
+                  Global Climate Summit Reaches Historic Agreement: What It
+                  Means for the Future
+                </a>
+              </h2>
+              <div class="featured-meta">
+                <i class="far fa-clock"></i> 2 hours ago &nbsp;&nbsp;
+                <i class="far fa-user"></i> John Anderson
+              </div>
+            </div>
+          </div>
+
+          <!-- Side Featured Articles -->
+          <div class="featured-side">
+            <div class="featured-side-item reveal">
+              <img
+                src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600"
+                alt="Tech News"
+              />
+              <div class="featured-side-content">
+                <span class="featured-category">Technology</span>
+                <h3 class="featured-side-title">
+                  <a href="#"
+                    >Revolutionary AI Breakthrough Could Change Everything We
+                    Know About Computing</a
+                  >
+                </h3>
+              </div>
+            </div>
+            <div class="featured-side-item reveal">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600"
+                alt="Business News"
+              />
+              <div class="featured-side-content">
+                <span class="featured-category">Business</span>
+                <h3 class="featured-side-title">
+                  <a href="#"
+                    >Markets Rally as Fed Signals Potential Rate Cuts Later This
+                    Year</a
+                  >
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LATEST NEWS SECTION -->
+        <h2 class="section-title stagger-2">Latest News</h2>
+        <div class="article-grid stagger-2">
+          <!-- Article Card 1 -->
+          <article class="article-card reveal">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600"
+                alt="Politics"
+              />
+              <span class="category-tag">Politics</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#"
+                  >Election 2026: Key Debates and What Voters Need to Know</a
+                >
+              </h3>
+              <div class="card-meta">
+                <i class="far fa-clock"></i> 3 hours ago &nbsp;
+                <i class="far fa-comments"></i> 24
+              </div>
+              <p class="card-excerpt">
+                With primaries underway, candidates focus on economy and
+                healthcare as top issues...
+              </p>
+              <a href="#" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Article Card 2 -->
+          <article class="article-card reveal">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600"
+                alt="Sports"
+              />
+              <span class="category-tag">Sports</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#"
+                  >Champions League Quarter-Finals: Complete Preview and
+                  Predictions</a
+                >
+              </h3>
+              <div class="card-meta">
+                <i class="far fa-clock"></i> 5 hours ago &nbsp;
+                <i class="far fa-comments"></i> 18
+              </div>
+              <p class="card-excerpt">
+                The stage is set for thrilling encounters as Europe's elite
+                battle for semifinal spots...
+              </p>
+              <a href="#" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Article Card 3 -->
+          <article class="article-card reveal">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600"
+                alt="Health"
+              />
+              <span class="category-tag">Health</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#"
+                  >New Study Reveals Surprising Benefits of Mediterranean
+                  Diet</a
+                >
+              </h3>
+              <div class="card-meta">
+                <i class="far fa-clock"></i> 6 hours ago &nbsp;
+                <i class="far fa-comments"></i> 12
+              </div>
+              <p class="card-excerpt">
+                Research shows significant reduction in heart disease risk among
+                long-term followers...
+              </p>
+              <a href="#" class="read-more"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+        </div>
+
+        <!-- BULLETIN -->
+        <h2 class="section-title stagger-3">Bulletin</h2>
+        <div class="bulletin-row stagger-3">
+          <div
+            class="bulletin-item reveal"
+            data-label="Obituary: Mary Johnson"
+            data-date="Mar 10, 2026"
+          >
+            <a href="/obituaries/mary-johnson">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Obituary"
+              />
+            </a>
+          </div>
+          <div
+            class="bulletin-item reveal"
+            data-label="Downtown Street Fair"
+            data-date="Sat, Mar 15"
+          >
+            <a href="/events/downtown-street-fair">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1995/1995572.png"
+                alt="Event"
+              />
+            </a>
+          </div>
+          <div
+            class="bulletin-item reveal"
+            data-label="City Budget Approved"
+            data-date="2 hours ago"
+          >
+            <a href="/press/city-budget-approved">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png"
+                alt="Press Release"
+              />
+            </a>
+          </div>
+          <div
+            class="bulletin-item reveal"
+            data-label="Lincoln HS: 2-hr delay"
+            data-date="Today, 7:30 AM"
+          >
+            <a href="/schools/closures#lincoln">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3069/3069176.png"
+                alt="School Delay"
+              />
+            </a>
+          </div>
+          <div
+            class="bulletin-item reveal"
+            data-label="Robert Chen, 78"
+            data-date="Mar 9, 2026"
+          >
+            <a href="/obituaries/robert-chen">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Obituary"
+              />
+            </a>
+          </div>
+          <div
+            class="bulletin-item reveal"
+            data-label="Library Book Sale"
+            data-date="Mar 12–14"
+          >
+            <a href="/events/library-book-sale">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png"
+                alt="Library Event"
+              />
+            </a>
+          </div>
+          <div
+            class="bulletin-item reveal"
+            data-label="Police Chief announces retirement"
+            data-date="1 day ago"
+          >
+            <a href="/press/police-chief-retires">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                alt="Press Release"
+              />
+            </a>
+          </div>
+          <div
+            class="bulletin-item reveal"
+            data-label="Annual Spring Cleanup"
+            data-date="Sat, Mar 22"
+          >
+            <a href="/events/spring-cleanup">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/263/263115.png"
+                alt="Event"
+              />
+            </a>
+          </div>
+          <div
+            class="bulletin-item reveal"
+            data-label="Eleanor Ramirez, 92"
+            data-date="Mar 8, 2026"
+          >
+            <a href="/obituaries/eleanor-ramirez">
+              <img
+                src="https://randomuser.me/api/portraits/women/90.jpg"
+                alt="Obituary"
+              />
+            </a>
+          </div>
+          <div
+            class="bulletin-item reveal"
+            data-label="Water main repair: detour"
+            data-date="Mar 11–12"
+          >
+            <a href="/notices/water-main-repair">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/190/190411.png"
+                alt="Notice"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- MUST READ -->
+        <h2 class="section-title stagger-4">Must Read</h2>
+        <div class="must-read stagger-4">
+          <div class="grid">
+            <!-- Left Card -->
+            <div class="card small unfeature reveal">
+              <img src="https://picsum.photos/300/200" />
+              <div class="card-content">
+                <div class="card-meta-top">
+                  <span class="dot red"></span>
+                  <span class="read-meta"
+                    ><i class="far fa-clock"></i> 3 hours ago</span
+                  >
+                </div>
+                <a class="card-title-small">
+                  A Senator’s scheme stirs up another feud, fuels
+                  misunderstanding...
+                </a>
+                <p class="card-excerpt-small">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod...
+                </p>
+                <span class="read-time">2 min read</span>
+              </div>
+            </div>
+
+            <!-- Center Featured -->
+            <div class="card featured unfeature reveal">
+              <img src="https://picsum.photos/600/400" />
+              <div class="overlay">
+                <div class="card-meta-top light">
+                  <span class="dot"></span>
+
+                  <span>
+                    <span class="read-meta"><i class="far fa-clock"></i></span
+                    >&nbsp;25 hours ago</span
+                  >
+                </div>
+                <a class="featured-title-custom">
+                  Taylor Swift is sending a powerful message to women on the
+                  Eras Tour
+                </a>
+                <p class="featured-desc">
+                  The artist has hit different notes in this tour, making a
+                  statement that resonates...
+                </p>
+                <span class="read-time">Entertainment • 5 min read</span>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+              <div class="card small unfeature reveal">
+                <img src="https://picsum.photos/300/200" />
+                <div class="card-content">
+                  <div class="card-meta-top">
+                    <span class="dot red"></span>
+                    <span class="read-meta"
+                      ><i class="far fa-clock"></i> 25 hours ago</span
+                    >
+                  </div>
+                  <a class="card-title-small">
+                    Inside Qatar’s city of the future... </a
+                  ><br />
+                  <span class="read-time">4 min read</span>
+                </div>
+              </div>
+              <div class="card small unfeature reveal">
+                <img src="https://picsum.photos/300/200" />
+                <div class="card-content">
+                  <div class="card-meta-top">
+                    <span class="dot red"></span>
+                    <span class="read-meta"
+                      ><i class="far fa-clock"></i> 3 hours ago</span
+                    >
+                  </div>
+                  <a class="card-title-small">Wrexham invasion promises...</a
+                  ><br />
+                  <span class="read-time">4 min read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDITOR PICKS -->
+        <h2 class="section-title stagger-5">Editor's Pick</h2>
+        <div class="editor-pick stagger-5">
+          <div class="editor-main unfeature reveal">
+            <img src="https://picsum.photos/1200/500" />
+            <div class="editor-overlay">
+              <div class="card-meta-top light">
+                <span class="dot"></span>
+
+                <span>
+                  <span class="read-meta"><i class="far fa-clock"></i></span
+                  >&nbsp;25 hours ago</span
+                >
+              </div>
+              <a class="featured-title-custom">
+                Taylor Swift is sending a powerful message to women on the Eras
+                Tour
+              </a>
+              <p class="featured-desc">
+                The artist has hit different notes in this tour, making a
+                statement that resonates...
+              </p>
+              <span class="read-time">Entertainment • 5 min read</span>
+            </div>
+          </div>
+
+          <div class="editor-grid">
+            <div class="card small unfeature reveal">
+              <img src="https://picsum.photos/200" />
+              <div class="card-content">
+                <div class="card-meta-top">
+                  <span class="dot red"></span>
+                  <span class="read-meta"
+                    ><i class="far fa-clock"></i> 3 hours ago</span
+                  >
+                </div>
+                <a class="card-title-small">
+                  A Senator’s scheme stirs up another feud, fuels
+                  misunderstanding...
+                </a>
+                <p class="card-excerpt-small">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod...
+                </p>
+                <span class="read-time">2 min read</span>
+              </div>
+            </div>
+            <div class="card small unfeature reveal">
+              <img src="https://picsum.photos/200" />
+              <div class="card-content">
+                <div class="card-meta-top">
+                  <span class="dot red"></span>
+                  <span class="read-meta"
+                    ><i class="far fa-clock"></i> 3 hours ago</span
+                  >
+                </div>
+                <a class="card-title-small">
+                  A Senator’s scheme stirs up another feud, fuels
+                  misunderstanding...
+                </a>
+                <p class="card-excerpt-small">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod...
+                </p>
+                <span class="read-time">2 min read</span>
+              </div>
+            </div>
+            <div class="card small unfeature reveal">
+              <img src="https://picsum.photos/200" />
+              <div class="card-content">
+                <div class="card-meta-top">
+                  <span class="dot red"></span>
+                  <span class="read-meta"
+                    ><i class="far fa-clock"></i> 3 hours ago</span
+                  >
+                </div>
+                <a class="card-title-small">
+                  A Senator’s scheme stirs up another feud, fuels
+                  misunderstanding...
+                </a>
+                <p class="card-excerpt-small">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod...
+                </p>
+                <span class="read-time">2 min read</span>
+              </div>
+            </div>
+            <div class="card small unfeature reveal">
+              <img src="https://picsum.photos/200" />
+              <div class="card-content">
+                <div class="card-meta-top">
+                  <span class="dot red"></span>
+                  <span class="read-meta"
+                    ><i class="far fa-clock"></i> 3 hours ago</span
+                  >
+                </div>
+                <a class="card-title-small">
+                  A Senator’s scheme stirs up another feud, fuels
+                  misunderstanding...
+                </a>
+                <p class="card-excerpt-small">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod...
+                </p>
+                <span class="read-time">2 min read</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BUSINESS + SPORTS -->
+        <div class="double-section">
+          <!-- Business -->
+          <div>
+            <h2 class="section-title">Business</h2>
+            <div class="article-grid business">
+              <article class="article-card reveal">
+                <div class="card small unfeature">
+                  <img src="https://picsum.photos/200" />
+                  <div class="card-content">
+                    <div class="card-meta-top">
+                      <span class="dot red"></span>
+                      <span class="read-meta"
+                        ><i class="far fa-clock"></i> 3 hours ago</span
+                      >
+                    </div>
+                    <a class="card-title-small">
+                      A Senator’s scheme stirs up another feud, fuels
+                      misunderstanding...
+                    </a>
+                    <p class="card-excerpt-small">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod...
+                    </p>
+                    <span class="read-time">2 min read</span>
+                  </div>
+                </div>
+              </article>
+              <article class="article-card reveal">
+                <div class="card small unfeature">
+                  <img src="https://picsum.photos/200" />
+                  <div class="card-content">
+                    <div class="card-meta-top">
+                      <span class="dot red"></span>
+                      <span class="read-meta"
+                        ><i class="far fa-clock"></i> 3 hours ago</span
+                      >
+                    </div>
+                    <a class="card-title-small">
+                      A Senator’s scheme stirs up another feud, fuels
+                      misunderstanding...
+                    </a>
+                    <p class="card-excerpt-small">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod...
+                    </p>
+                    <span class="read-time">2 min read</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- Sports -->
+          <div>
+            <h2 class="section-title">Sport News</h2>
+            <div class="article-grid sports">
+              <article class="article-card reveal">
+                <div class="card small unfeature">
+                  <img src="https://picsum.photos/200" />
+                  <div class="card-content">
+                    <div class="card-meta-top">
+                      <span class="dot red"></span>
+                      <span class="read-meta"
+                        ><i class="far fa-clock"></i> 3 hours ago</span
+                      >
+                    </div>
+                    <a class="card-title-small">
+                      A Senator’s scheme stirs up another feud, fuels
+                      misunderstanding...
+                    </a>
+                    <p class="card-excerpt-small">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod...
+                    </p>
+                    <span class="read-time">2 min read</span>
+                  </div>
+                </div>
+              </article>
+              <article class="article-card reveal">
+                <div class="card small unfeature">
+                  <img src="https://picsum.photos/200" />
+                  <div class="card-content">
+                    <div class="card-meta-top">
+                      <span class="dot red"></span>
+                      <span class="read-meta"
+                        ><i class="far fa-clock"></i> 3 hours ago</span
+                      >
+                    </div>
+                    <a class="card-title-small">
+                      A Senator’s scheme stirs up another feud, fuels
+                      misunderstanding...
+                    </a>
+                    <p class="card-excerpt-small">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod...
+                    </p>
+                    <span class="read-time">2 min read</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOP CREATOR -->
+        <h2 class="section-title">Top Creator</h2>
+        <div class="creators">
+          <div class="creator reveal">
+            <a href="#" class="creator-link"
+              ><img src="https://i.pravatar.cc/90?img=10" alt="Alex"
+            /></a>
+            <div class="creator-info">
+              <h3 class="creator-name">Alex Morgan</h3>
+              <p class="creator-role">Tech Journalist</p>
+            </div>
+          </div>
+          <div class="creator reveal">
+            <a href="#" class="creator-link"
+              ><img src="https://i.pravatar.cc/90?img=11" alt="Joe"
+            /></a>
+            <div class="creator-info">
+              <h3 class="creator-name">Joe Carter</h3>
+              <p class="creator-role">Sports Analyst</p>
+            </div>
+          </div>
+          <div class="creator reveal">
+            <a href="#" class="creator-link"
+              ><img src="https://i.pravatar.cc/90?img=12" alt="Alexa"
+            /></a>
+            <div class="creator-info">
+              <h3 class="creator-name">Alexa Ray</h3>
+              <p class="creator-role">Health Expert</p>
+            </div>
+          </div>
+          <div class="creator reveal">
+            <a href="#" class="creator-link"
+              ><img src="https://i.pravatar.cc/90?img=13" alt="Ashley"
+            /></a>
+            <div class="creator-info">
+              <h3 class="creator-name">Ashley Cole</h3>
+              <p class="creator-role">Entertainment</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN CONTENT AREA WITH SIDEBAR -->
+        <div class="content-area">
+          <!-- Main Content (Left Column) -->
+          <div class="main-content">
+            <h2 class="section-title">Must Read</h2>
+            <div class="article-grid" style="grid-template-columns: 1fr 1fr">
+              <!-- Additional Articles -->
+              <article class="article-card reveal">
+                <div class="card-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=600"
+                    alt="Technology"
+                  />
+                  <span class="category-tag">Tech</span>
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">
+                    <a href="#"
+                      >The Future of Work: How AI is Reshaping the Job Market</a
+                    >
+                  </h3>
+                  <div class="card-meta">
+                    <i class="far fa-clock"></i> 8 hours ago
+                  </div>
+                  <p class="card-excerpt">
+                    Experts weigh in on which jobs will thrive and which may
+                    disappear in the coming decade...
+                  </p>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </article>
+
+              <article class="article-card reveal">
+                <div class="card-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=600"
+                    alt="Technology"
+                  />
+                  <span class="category-tag">Tech</span>
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">
+                    <a href="#"
+                      >The Future of Work: How AI is Reshaping the Job Market</a
+                    >
+                  </h3>
+                  <div class="card-meta">
+                    <i class="far fa-clock"></i> 8 hours ago
+                  </div>
+                  <p class="card-excerpt">
+                    Experts weigh in on which jobs will thrive and which may
+                    disappear in the coming decade...
+                  </p>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </article>
+
+              <article class="article-card reveal">
+                <div class="card-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=600"
+                    alt="Technology"
+                  />
+                  <span class="category-tag">Tech</span>
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">
+                    <a href="#"
+                      >The Future of Work: How AI is Reshaping the Job Market</a
+                    >
+                  </h3>
+                  <div class="card-meta">
+                    <i class="far fa-clock"></i> 8 hours ago
+                  </div>
+                  <p class="card-excerpt">
+                    Experts weigh in on which jobs will thrive and which may
+                    disappear in the coming decade...
+                  </p>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </article>
+
+              <article class="article-card reveal">
+                <div class="card-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=600"
+                    alt="Technology"
+                  />
+                  <span class="category-tag">Tech</span>
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">
+                    <a href="#"
+                      >The Future of Work: How AI is Reshaping the Job Market</a
+                    >
+                  </h3>
+                  <div class="card-meta">
+                    <i class="far fa-clock"></i> 8 hours ago
+                  </div>
+                  <p class="card-excerpt">
+                    Experts weigh in on which jobs will thrive and which may
+                    disappear in the coming decade...
+                  </p>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </article>
+
+              <article class="article-card reveal">
+                <div class="card-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=600"
+                    alt="Technology"
+                  />
+                  <span class="category-tag">Tech</span>
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">
+                    <a href="#"
+                      >The Future of Work: How AI is Reshaping the Job Market</a
+                    >
+                  </h3>
+                  <div class="card-meta">
+                    <i class="far fa-clock"></i> 8 hours ago
+                  </div>
+                  <p class="card-excerpt">
+                    Experts weigh in on which jobs will thrive and which may
+                    disappear in the coming decade...
+                  </p>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </article>
+
+              <article class="article-card reveal">
+                <div class="card-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600"
+                    alt="Travel"
+                  />
+                  <span class="category-tag">Travel</span>
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">
+                    <a href="#"
+                      >10 Hidden Gems in Europe You Need to Visit in 2026</a
+                    >
+                  </h3>
+                  <div class="card-meta">
+                    <i class="far fa-clock"></i> 10 hours ago
+                  </div>
+                  <p class="card-excerpt">
+                    Avoid the crowds and discover these breathtaking
+                    off-the-beaten-path destinations...
+                  </p>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Sidebar (Right Column) -->
+          <aside class="sidebar">
+            <!-- Popular Posts Widget -->
+            <div class="sidebar-widget reveal">
+              <h3 class="widget-title">Popular Now</h3>
+              <div class="popular-posts">
+                <div class="popular-post-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?w=150"
+                    alt="Post"
+                    class="popular-post-image"
+                  />
+                  <div class="popular-post-content">
+                    <h4 class="popular-post-title">
+                      <a href="#">Supreme Court Ruling Changes Everything</a>
+                    </h4>
+                    <div class="popular-post-date">
+                      <i class="far fa-eye"></i> 12K views
+                    </div>
+                  </div>
+                </div>
+                <div class="popular-post-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=150"
+                    alt="Post"
+                    class="popular-post-image"
+                  />
+                  <div class="popular-post-content">
+                    <h4 class="popular-post-title">
+                      <a href="#">Bitcoin Hits All-Time High: What Now?</a>
+                    </h4>
+                    <div class="popular-post-date">
+                      <i class="far fa-eye"></i> 8.5K views
+                    </div>
+                  </div>
+                </div>
+                <div class="popular-post-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=150"
+                    alt="Post"
+                    class="popular-post-image"
+                  />
+                  <div class="popular-post-content">
+                    <h4 class="popular-post-title">
+                      <a href="#">New Gaming Console Released Today</a>
+                    </h4>
+                    <div class="popular-post-date">
+                      <i class="far fa-eye"></i> 6.2K views
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="sidebar-widget reveal">
+              <h3 class="widget-title">Categories</h3>
+              <ul class="category-list">
+                <li class="category-list-item">
+                  <a href="#"
+                    >Politics <span class="category-count">48</span></a
+                  >
+                </li>
+                <li class="category-list-item">
+                  <a href="#"
+                    >Technology <span class="category-count">76</span></a
+                  >
+                </li>
+                <li class="category-list-item">
+                  <a href="#"
+                    >Business <span class="category-count">52</span></a
+                  >
+                </li>
+                <li class="category-list-item">
+                  <a href="#">Sports <span class="category-count">63</span></a>
+                </li>
+                <li class="category-list-item">
+                  <a href="#"
+                    >Entertainment <span class="category-count">41</span></a
+                  >
+                </li>
+                <li class="category-list-item">
+                  <a href="#">Health <span class="category-count">37</span></a>
+                </li>
+                <li class="category-list-item">
+                  <a href="#">Travel <span class="category-count">29</span></a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Newsletter Widget -->
+            <div class="sidebar-widget newsletter-widget reveal">
+              <h3 class="widget-title">Newsletter</h3>
+              <p class="newsletter-text">
+                Get the latest news delivered directly to your inbox. No spam,
+                unsubscribe anytime.
+              </p>
+              <form>
+                <input
+                  type="email"
+                  class="newsletter-input"
+                  placeholder="Your email address"
+                  required
+                />
+                <button type="submit" class="newsletter-button">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-grid">
+            <!-- Widget 1: About Us -->
+            <div class="footer-widget">
+              <a href="#" class="footer-logo">The<span>Horizon</span></a>
+              <p class="footer-about-text">
+                Delivering accurate, timely news from around the globe. Our
+                commitment to journalistic integrity and comprehensive coverage
+                makes us your trusted source for what matters most.
+              </p>
+              <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+
+            <!-- Widget 2: Recent Posts -->
+            <div class="footer-widget">
+              <h4 class="footer-widget-title">Recent Posts</h4>
+              <ul class="footer-recent-posts">
+                <li class="footer-recent-item">
+                  <a href="#" class="footer-recent-link">
+                    <img
+                      src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=150"
+                      alt="Post"
+                      class="footer-recent-image"
+                    />
+                    <div class="footer-recent-content">
+                      <div class="footer-recent-title">
+                        Global Summit Reaches Historic Agreement
+                      </div>
+                      <div class="footer-recent-date">
+                        <i class="far fa-clock"></i> 2 hours ago
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="footer-recent-item">
+                  <a href="#" class="footer-recent-link">
+                    <img
+                      src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=150"
+                      alt="Post"
+                      class="footer-recent-image"
+                    />
+                    <div class="footer-recent-content">
+                      <div class="footer-recent-title">
+                        AI Breakthrough Changes Computing Forever
+                      </div>
+                      <div class="footer-recent-date">
+                        <i class="far fa-clock"></i> 5 hours ago
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="footer-recent-item">
+                  <a href="#" class="footer-recent-link">
+                    <img
+                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=150"
+                      alt="Post"
+                      class="footer-recent-image"
+                    />
+                    <div class="footer-recent-content">
+                      <div class="footer-recent-title">
+                        Markets Rally on Rate Cut Hopes
+                      </div>
+                      <div class="footer-recent-date">
+                        <i class="far fa-clock"></i> 8 hours ago
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Widget 3: Tags -->
+            <div class="footer-widget">
+              <h4 class="footer-widget-title">Popular Tags</h4>
+              <div class="footer-tags">
+                <a href="#" class="footer-tag">Politics</a>
+                <a href="#" class="footer-tag">Technology</a>
+                <a href="#" class="footer-tag">Business</a>
+                <a href="#" class="footer-tag">Sports</a>
+                <a href="#" class="footer-tag">Health</a>
+                <a href="#" class="footer-tag">Travel</a>
+                <a href="#" class="footer-tag">Entertainment</a>
+                <a href="#" class="footer-tag">Science</a>
+                <a href="#" class="footer-tag">AI</a>
+                <a href="#" class="footer-tag">Climate</a>
+                <a href="#" class="footer-tag">Economy</a>
+                <a href="#" class="footer-tag">World News</a>
+              </div>
+            </div>
+
+            <!-- Widget 4: Instagram Feed -->
+            <div class="footer-widget">
+              <h4 class="footer-widget-title">Instagram</h4>
+              <div class="footer-instagram-grid">
+                <a href="#" class="footer-instagram-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=150"
+                    alt="Instagram"
+                  />
+                  <span class="footer-instagram-overlay"
+                    ><i class="fab fa-instagram"></i
+                  ></span>
+                </a>
+                <a href="#" class="footer-instagram-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=150"
+                    alt="Instagram"
+                  />
+                  <span class="footer-instagram-overlay"
+                    ><i class="fab fa-instagram"></i
+                  ></span>
+                </a>
+                <a href="#" class="footer-instagram-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=150"
+                    alt="Instagram"
+                  />
+                  <span class="footer-instagram-overlay"
+                    ><i class="fab fa-instagram"></i
+                  ></span>
+                </a>
+                <a href="#" class="footer-instagram-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=150"
+                    alt="Instagram"
+                  />
+                  <span class="footer-instagram-overlay"
+                    ><i class="fab fa-instagram"></i
+                  ></span>
+                </a>
+                <a href="#" class="footer-instagram-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=150"
+                    alt="Instagram"
+                  />
+                  <span class="footer-instagram-overlay"
+                    ><i class="fab fa-instagram"></i
+                  ></span>
+                </a>
+                <a href="#" class="footer-instagram-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=150"
+                    alt="Instagram"
+                  />
+                  <span class="footer-instagram-overlay"
+                    ><i class="fab fa-instagram"></i
+                  ></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-copyright">
+            © 2026 <a href="#">The Horizon</a>. All Rights Reserved. Made with
+            <i class="fas fa-heart" style="color: var(--primary-red)"></i> for
+            modern news.
+          </div>
+          <ul class="footer-bottom-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Newsletter Popup -->
+    <div class="newsletter-popup" id="newsletterPopup">
+      <button class="popup-close">×</button>
+      <h4 class="popup-title">📧 Never Miss a Story</h4>
+      <p>
+        Subscribe to our newsletter and get the best news delivered to your
+        inbox.
+      </p>
+      <form id="newsletterForm">
+        <input
+          type="email"
+          class="popup-input"
+          placeholder="Your email address"
+          required
+        />
+        <button type="submit" class="popup-button">Subscribe Now</button>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

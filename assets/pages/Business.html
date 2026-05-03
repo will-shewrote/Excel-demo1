@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business News | The Horizon</title>
+    <!-- Font Awesome & Chart.js & NProgress -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+    <link rel="stylesheet" href="../../news.css" />
+  </head>
+  <body>
+    <!-- TOP BAR with Dark Mode Toggle -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar-date">
+          <i class="far fa-calendar-alt"></i> Tuesday, March 10, 2026
+        </div>
+        <div class="top-bar-actions">
+          <button
+            class="dark-mode-toggle"
+            id="darkModeToggle"
+            aria-label="Toggle dark mode"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+          <div class="top-bar-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER MAIN -->
+    <header class="header-main">
+      <div class="container">
+        <div class="logo-area">
+          <a href="../../index.html" class="logo">The<span>Horizon</span></a>
+          <div class="logo-tagline">Today's News, Tomorrow's History</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="main-nav">
+      <div class="container">
+        <button class="menu-toggle"><i class="fas fa-bars"></i> Menu</button>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="../../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              >Politics <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-menu">
+              <a href="./National.html" class="dropdown-item">National</a>
+              <a href="#" class="dropdown-item">International</a>
+              <a href="#" class="dropdown-item">Elections 2026</a>
+              <a href="#" class="dropdown-item">Policy</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="./Business.html" class="nav-link">Business</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              >Technology <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">AI & Robotics</a>
+              <a href="#" class="dropdown-item">Gadgets</a>
+              <a href="#" class="dropdown-item">Startups</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Sports</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Entertainment</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Health</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Travel</a></li>
+          <div class="nav-indicator"></div>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- BREAKING NEWS TICKER (with pulse) -->
+    <div class="breaking-news">
+      <div class="container">
+        <span class="breaking-label">BREAKING</span>
+        <div class="breaking-ticker" id="liveTicker">
+          <div class="ticker-track" id="tickerTrack"></div>
+        </div>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <main>
+      <div class="container">
+        <!-- LIVE MARKET BAR (handled in JS) -->
+        <div class="market-bar glass-card" id="marketBar"></div>
+
+        <!-- HERO GRID -->
+        <div class="national-grid stagger-1">
+          <div class="national-main reveal glass-card">
+            <img
+              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200"
+              alt="Business Featured"
+              loading="lazy"
+            />
+            <div class="national-content">
+              <span class="national-category">Markets</span>
+              <h2 class="national-title">
+                <a href="#"
+                  >Fed Signals Rate Cuts: What It Means for Your Portfolio in
+                  2026</a
+                >
+              </h2>
+              <div class="meta">
+                <span><i class="far fa-clock"></i> 1h ago</span
+                ><span><i class="far fa-user"></i> Michael Chen</span
+                ><span><i class="far fa-book-open"></i> 6 min read</span>
+              </div>
+            </div>
+          </div>
+          <div class="national-side">
+            <div class="national-side-item reveal glass-card">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600"
+                loading="lazy"
+              />
+              <div class="national-side-content">
+                <span class="national-category">Tech</span>
+                <h3 class="national-side-title">
+                  <a href="#"
+                    >AI Startup Files for IPO, Valuation Could Top $50
+                    Billion</a
+                  >
+                </h3>
+                <div class="meta">
+                  <span><i class="far fa-clock"></i> 3h</span
+                  ><span><i class="far fa-book-open"></i> 4 min</span>
+                </div>
+              </div>
+            </div>
+            <div class="national-side-item reveal glass-card">
+              <img
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600"
+                loading="lazy"
+              />
+              <div class="national-side-content">
+                <span class="national-category">Real Estate</span>
+                <h3 class="national-side-title">
+                  <a href="#"
+                    >Commercial Property Sales Surge as Return-to-Office
+                    Stabilizes</a
+                  >
+                </h3>
+                <div class="meta">
+                  <span><i class="far fa-clock"></i> 5h</span
+                  ><span><i class="far fa-book-open"></i> 5 min</span>
+                </div>
+              </div>
+            </div>
+            <div class="national-side-item reveal glass-card">
+              <img
+                src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600"
+                loading="lazy"
+              />
+              <div class="national-side-content">
+                <span class="national-category">Energy</span>
+                <h3 class="national-side-title">
+                  <a href="#"
+                    >Oil Prices Jump After OPEC+ Announces Surprise Production
+                    Cut</a
+                  >
+                </h3>
+                <div class="meta">
+                  <span><i class="far fa-clock"></i> 2h</span
+                  ><span><i class="far fa-book-open"></i> 4 min</span>
+                </div>
+              </div>
+            </div>
+            <div class="national-side-item reveal glass-card">
+              <img
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600"
+                loading="lazy"
+              />
+              <div class="national-side-content">
+                <span class="national-category">Banking</span>
+                <h3 class="national-side-title">
+                  <a href="#"
+                    >Major Banks Report Record Profits Amid Rising Interest
+                    Income</a
+                  >
+                </h3>
+                <div class="meta">
+                  <span><i class="far fa-clock"></i> 6h</span
+                  ><span><i class="far fa-book-open"></i> 3 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTOR PERFORMANCE HEATMAP -->
+        <h2 class="section-title stagger-2">Sector Performance</h2>
+        <div class="sector-heatmap glass-card" id="sectorHeatmap"></div>
+
+        <!-- MAIN CONTENT AREA WITH SIDEBAR -->
+        <div class="content-area">
+          <div class="main-content">
+            <!-- POPULAR BUSINESS (2-col) -->
+            <h2 class="section-title stagger-3">Popular News</h2>
+            <div class="article-grid-top stagger-3">
+              <div class="national-main reveal glass-card">
+                <img
+                  src="https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=1200"
+                  loading="lazy"
+                />
+                <div class="national-content">
+                  <span class="national-category">Investing</span>
+                  <h2 class="national-title">
+                    <a href="#"
+                      >Bull Market Continues: S&P 500 Hits New All-Time High</a
+                    >
+                  </h2>
+                  <div class="meta">
+                    <span><i class="far fa-clock"></i> 3h</span
+                    ><span><i class="far fa-user"></i> Sarah Johnson</span
+                    ><span><i class="far fa-book-open"></i> 5 min</span>
+                  </div>
+                </div>
+              </div>
+              <div class="national-main reveal glass-card">
+                <img
+                  src="https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=1200"
+                  loading="lazy"
+                />
+                <div class="national-content">
+                  <span class="national-category crypto">Crypto</span>
+                  <h2 class="national-title">
+                    <a href="#"
+                      >Bitcoin ETF Inflows Surpass $10 Billion in First
+                      Quarter</a
+                    >
+                  </h2>
+                  <div class="meta">
+                    <span><i class="far fa-clock"></i> 5h</span
+                    ><span><i class="far fa-user"></i> David Park</span
+                    ><span><i class="far fa-book-open"></i> 4 min</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- MARKET MOVERS TABLE -->
+            <h2 class="section-title stagger-4">Market Movers</h2>
+            <div class="market-movers glass-card" id="marketMovers">
+              <table class="movers-table">
+                <thead>
+                  <tr>
+                    <th>Symbol</th>
+                    <th>Price</th>
+                    <th>Change</th>
+                    <th>Trend</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="moversBody"></tbody>
+              </table>
+            </div>
+
+            <!-- EMBEDDED INTERACTIVE CHART -->
+            <h2 class="section-title stagger-5">Featured Analysis</h2>
+            <div class="featured-analysis glass-card reveal">
+              <h3>S&P 500 Technical Outlook</h3>
+              <canvas id="sp500Chart" width="600" height="300"></canvas>
+              <p class="chart-caption">
+                The index has broken above key resistance, signaling further
+                upside potential.
+              </p>
+              <button
+                class="listen-btn"
+                data-summary="S&P 500 has broken above key resistance, signaling further upside potential."
+              >
+                <i class="fas fa-volume-up"></i> Listen
+              </button>
+            </div>
+
+            <!-- SECONDARY HIGHLIGHTS (2-col) -->
+            <h2 class="section-title stagger-6">Top Stories</h2>
+            <div class="secondary-highlights">
+              <article class="highlight-card glass-card reveal">
+                <img
+                  src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=600"
+                  alt="Story"
+                  loading="lazy"
+                />
+                <div class="highlight-content">
+                  <span class="category-tag finance">Finance</span>
+                  <h3>
+                    <a href="#"
+                      >Amazon to Acquire AI Robotics Company in $2.5B Deal</a
+                    >
+                  </h3>
+                  <div class="meta">
+                    <span><i class="far fa-clock"></i> 2h ago</span
+                    ><span><i class="far fa-user"></i> Sarah Lee</span
+                    ><span><i class="far fa-book-open"></i> 4 min read</span>
+                  </div>
+                  <p class="excerpt">
+                    The e-commerce giant expands its automation capabilities
+                    with strategic acquisition...
+                  </p>
+                </div>
+              </article>
+              <article class="highlight-card glass-card reveal">
+                <img
+                  src="https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?w=600"
+                  alt="Story"
+                  loading="lazy"
+                />
+                <div class="highlight-content">
+                  <span class="category-tag energy">Energy</span>
+                  <h3>
+                    <a href="#"
+                      >Tesla Deliveries Beat Expectations, Stock Jumps 8%</a
+                    >
+                  </h3>
+                  <div class="meta">
+                    <span><i class="far fa-clock"></i> 4h ago</span
+                    ><span><i class="far fa-user"></i> James Carter</span
+                    ><span><i class="far fa-book-open"></i> 3 min read</span>
+                  </div>
+                  <p class="excerpt">
+                    EV maker reports record quarterly numbers as production
+                    bottlenecks ease...
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <!-- NEWS FEED (Tertiary) -->
+            <h2 class="section-title">Latest News</h2>
+            <div class="news-feed" id="newsFeedContainer">
+              <!-- Skeleton loaders will added by JS -->
+            </div>
+
+            <!-- LOAD MORE BUTTON -->
+            <div class="load-more-container">
+              <button class="load-more glass-card" id="loadMoreBtn">
+                Load More Articles <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- SIDEBAR -->
+          <aside class="sidebar">
+            <!-- Search -->
+            <div class="sidebar-widget search-widget stagger-5 reveal">
+              <h3 class="widget-title">Search</h3>
+              <div class="search-box">
+                <input type="text" placeholder="I'm looking for..." />
+                <button>Search</button>
+              </div>
+            </div>
+
+            <!-- Follow & Newsletter -->
+            <div class="sidebar-widget glass-card reveal">
+              <h3 class="widget-title">Follow US</h3>
+              <p class="newsletter-text">
+                Get the latest market updates on social media
+              </p>
+              <div class="newsletter-bar-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+              <h3>Daily Market Brief</h3>
+              <p class="newsletter-text">
+                Get the day's top business stories and market analysis delivered
+                to your inbox.
+              </p>
+              <form>
+                <input
+                  type="email"
+                  class="newsletter-input"
+                  placeholder="Your email address"
+                  required
+                /><button type="submit" class="follow-button">Subscribe</button>
+              </form>
+            </div>
+
+            <!-- Economic Calendar -->
+            <div class="sidebar-widget glass-card reveal">
+              <h3 class="widget-title">Economic Calendar</h3>
+              <ul class="eco-calendar" id="ecoCalendar"></ul>
+            </div>
+
+            <!-- Personal Watchlist -->
+            <div class="sidebar-widget glass-card reveal">
+              <h3 class="widget-title">My Watchlist</h3>
+              <div id="watchlistContainer">
+                <p class="watchlist-empty">
+                  Click <i class="far fa-star"></i> on any stock to add to your
+                  watchlist.
+                </p>
+                <ul class="watchlist-items" id="watchlistItems"></ul>
+              </div>
+            </div>
+
+            <!-- Recommended for You (Personalization) -->
+            <div class="sidebar-widget glass-card reveal">
+              <h3 class="widget-title">Recommended for You</h3>
+              <div id="recommendedContainer"></div>
+            </div>
+
+            <!-- Latest Business (sidebar feed) -->
+            <div class="sidebar-widget glass-card reveal">
+              <h3 class="widget-title">Latest</h3>
+              <div class="sidebar-feed" id="sidebarFeed"></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-grid">
+            <!-- Widget 1: About Us -->
+            <div class="footer-widget">
+              <a href="#" class="footer-logo">The<span>Horizon</span></a>
+              <p class="footer-about-text">
+                Delivering accurate, timely news from around the globe. Our
+                commitment to journalistic integrity and comprehensive coverage
+                makes us your trusted source for what matters most.
+              </p>
+              <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+
+            <!-- Widget 2: Recent Posts -->
+            <div class="footer-widget">
+              <h4 class="footer-widget-title">Recent Posts</h4>
+              <ul class="footer-recent-posts">
+                <li class="footer-recent-item">
+                  <a href="#" class="footer-recent-link">
+                    <img
+                      src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=150"
+                      alt="Post"
+                      class="footer-recent-image"
+                    />
+                    <div class="footer-recent-content">
+                      <div class="footer-recent-title">
+                        Global Summit Reaches Historic Agreement
+                      </div>
+                      <div class="footer-recent-date">
+                        <i class="far fa-clock"></i> 2 hours ago
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="footer-recent-item">
+                  <a href="#" class="footer-recent-link">
+                    <img
+                      src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=150"
+                      alt="Post"
+                      class="footer-recent-image"
+                    />
+                    <div class="footer-recent-content">
+                      <div class="footer-recent-title">
+                        AI Breakthrough Changes Computing Forever
+                      </div>
+                      <div class="footer-recent-date">
+                        <i class="far fa-clock"></i> 5 hours ago
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="footer-recent-item">
+                  <a href="#" class="footer-recent-link">
+                    <img
+                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=150"
+                      alt="Post"
+                      class="footer-recent-image"
+                    />
+                    <div class="footer-recent-content">
+                      <div class="footer-recent-title">
+                        Markets Rally on Rate Cut Hopes
+                      </div>
+                      <div class="footer-recent-date">
+                        <i class="far fa-clock"></i> 8 hours ago
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Widget 3: Tags -->
+            <div class="footer-widget">
+              <h4 class="footer-widget-title">Popular Tags</h4>
+              <div class="footer-tags">
+                <a href="#" class="footer-tag">Politics</a>
+                <a href="#" class="footer-tag">Technology</a>
+                <a href="#" class="footer-tag">Business</a>
+                <a href="#" class="footer-tag">Sports</a>
+                <a href="#" class="footer-tag">Health</a>
+                <a href="#" class="footer-tag">Travel</a>
+                <a href="#" class="footer-tag">Entertainment</a>
+                <a href="#" class="footer-tag">Science</a>
+                <a href="#" class="footer-tag">AI</a>
+                <a href="#" class="footer-tag">Climate</a>
+                <a href="#" class="footer-tag">Economy</a>
+                <a href="#" class="footer-tag">World News</a>
+              </div>
+            </div>
+
+            <!-- Widget 4: Instagram Feed -->
+            <div class="footer-widget">
+              <h4 class="footer-widget-title">Instagram</h4>
+              <div class="footer-instagram-grid">
+                <a href="#" class="footer-instagram-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=150"
+                    alt="Instagram"
+                  />
+                  <span class="footer-instagram-overlay"
+                    ><i class="fab fa-instagram"></i
+                  ></span>
+                </a>
+                <a href="#" class="footer-instagram-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=150"
+                    alt="Instagram"
+                  />
+                  <span class="footer-instagram-overlay"
+                    ><i class="fab fa-instagram"></i
+                  ></span>
+                </a>
+                <a href="#" class="footer-instagram-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=150"
+                    alt="Instagram"
+                  />
+                  <span class="footer-instagram-overlay"
+                    ><i class="fab fa-instagram"></i
+                  ></span>
+                </a>
+                <a href="#" class="footer-instagram-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=150"
+                    alt="Instagram"
+                  />
+                  <span class="footer-instagram-overlay"
+                    ><i class="fab fa-instagram"></i
+                  ></span>
+                </a>
+                <a href="#" class="footer-instagram-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=150"
+                    alt="Instagram"
+                  />
+                  <span class="footer-instagram-overlay"
+                    ><i class="fab fa-instagram"></i
+                  ></span>
+                </a>
+                <a href="#" class="footer-instagram-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=150"
+                    alt="Instagram"
+                  />
+                  <span class="footer-instagram-overlay"
+                    ><i class="fab fa-instagram"></i
+                  ></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-copyright">
+            © 2026 <a href="#">The Horizon</a>. All Rights Reserved. Made with
+            <i class="fas fa-heart" style="color: var(--primary-red)"></i> for
+            modern news.
+          </div>
+          <ul class="footer-bottom-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <div class="newsletter-popup" id="newsletterPopup">...</div>
+
+    <script src="../../script.js"></script>
+  </body>
+</html>
