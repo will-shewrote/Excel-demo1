@@ -971,6 +971,10 @@ body {
   .right-column .card.small.unfeature > img {
     height: 200px;
   }
+
+  .featured-desc {
+    display: none;
+  }
 }
 
 /* EDITOR PICKS */
